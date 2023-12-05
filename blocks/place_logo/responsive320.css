@@ -1,0 +1,9 @@
+@media screen and (max-width: 767px) and (min-width:320px){
+  .place_logo{
+    width: 320px;
+    margin: auto;
+  }
+  .line{
+    width: 320px;
+  }
+}

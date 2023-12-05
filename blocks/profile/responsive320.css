@@ -1,0 +1,13 @@
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .profile {
+    display: flex;
+    flex-direction: column;
+    width: 282px;
+  }
+
+  .add-button {
+    width: 282px;
+    height: 50px;
+    border-radius: 2px;
+  }
+}

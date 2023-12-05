@@ -1,0 +1,10 @@
+.profile {
+  display: flex;
+  width: 880px;
+  top: 159px;
+  align-items: center;
+  margin: 40px auto 50px;
+  column-gap: 30px;
+ 
+
+}

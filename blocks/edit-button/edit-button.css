@@ -1,0 +1,10 @@
+.edit-button{
+  position: relative;
+  align-self:last baseline;
+  transition: ease 1s;
+
+}
+
+.edit-button:hover{
+  opacity: 0.3;
+}
