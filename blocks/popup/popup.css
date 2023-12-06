@@ -27,3 +27,25 @@
   background-color: white;
   z-index: 1;
 }
+
+.popup__botton-close{
+  z-index: 1;
+
+}
+
+.popup__form{
+  color: black;
+}
+
+.popup__set{
+  border: none;
+  display: flex;
+ flex-direction: column;
+ row-gap: 8px; 
+}
+
+.popup__form{
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
