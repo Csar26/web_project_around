@@ -6,4 +6,56 @@
   margin: auto;
   row-gap: 20px;
   column-gap: 17px;
+  border-radius: 10px, 10px, 0px, 0px;
+}
+.element {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 10px;
+  width: 282px;
+  height: 361px;
+  border-radius: 10px;
+  margin: 0;
+}
+
+.element__image {
+  width: 100%;
+  border-radius: 10px, 10px, 0px, 0px;
+}
+
+.element__place {
+  display: flex;
+  background-color: white;
+  width: 282px;
+}
+.element__title {
+  width: 230px;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 29px;
+  text-align: left;
+  color: #000000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-left: 21px;
+}
+
+.element__like {
+  width: 20.76px;
+  height: 18.13px;
+  align-self: center;
+  justify-content: center;
+}
+@media screen and (max-width: 767px) and (min-width: 319px) {
+  .elements {
+    display: flex;
+    flex-direction: column;
+    width: 282px;
+    border-radius: 10px, 10px, 0px, 0px;
+    row-gap: 20px;
+    column-gap: 17px;
+  }
 }

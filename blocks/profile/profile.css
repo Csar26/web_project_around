@@ -5,6 +5,58 @@
   align-items: center;
   margin: 40px auto 50px;
   column-gap: 30px;
- 
+}
 
+.profile_info {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 415px;
+}
+
+.profile__name {
+  color: #ffffff;
+  font-family: Inter;
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: left;
+  margin: 0;
+}
+.profile__job {
+  width: 415px;
+  top: 236px;
+  left: 350px;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.profile__button {
+  position: relative;
+  align-self: baseline;
+  transition: ease 1s;
+  background-color: black;
+}
+
+.profile__button:hover {
+  opacity: 0.3;
+}
+
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .profile {
+    display: flex;
+    flex-direction: column;
+    width: 282px;
+  }
+
+  .add-button {
+    width: 282px;
+    height: 50px;
+    border-radius: 2px;
+  }
 }
