@@ -9,6 +9,7 @@
   .place_logo {
     width: 320px;
     margin: auto;
+    row-gap: 30px;
   }
   .line {
     width: 320px;

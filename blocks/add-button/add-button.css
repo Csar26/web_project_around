@@ -1,8 +1,22 @@
-.add-button{
+.add-button {
   transition: ease 1s;
-
+  width: 150px;
+  height: 50px;
+  border-radius: 2px;
+  border: 2px solid #FFFFFF;
+  background-color: black;
 }
 
-.add-button:hover{
+.add-button:hover {
   opacity: 0.3;
+}
+
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .add-button {
+    width: 282px;
+    height: 50px;
+    border: 2px solid #FFFFFF;
+    margin: 36px auto 36px;
+    
+     }
 }

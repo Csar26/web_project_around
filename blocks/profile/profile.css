@@ -9,10 +9,11 @@
 
 .profile_info {
   display: flex;
-  position: relative;
   flex-direction: column;
   align-items: flex-start;
   width: 415px;
+  height: 77px;
+  margin-right: 0;
 }
 
 .profile__name {
@@ -23,11 +24,11 @@
   line-height: 48px;
   text-align: left;
   margin: 0;
+  width: 415px;
+  height: 39px;
 }
 .profile__job {
   width: 415px;
-  top: 236px;
-  left: 350px;
   font-family: Inter;
   font-size: 18px;
   font-weight: 400;
@@ -37,10 +38,12 @@
 }
 
 .profile__button {
-  position: relative;
-  align-self: baseline;
+  position: absolute;
+  align-self: last baseline;
   transition: ease 1s;
   background-color: black;
+  border: none;
+  padding-left: 18px;
 }
 
 .profile__button:hover {
@@ -52,11 +55,30 @@
     display: flex;
     flex-direction: column;
     width: 282px;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
   }
 
-  .add-button {
-    width: 282px;
-    height: 50px;
-    border-radius: 2px;
+  .profile_info {
+    align-items: center;
+
   }
+
+  .profile__name {
+    width: 196px;
+    height: 22px;
+    font-family: Inter;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 27px;
+    text-align: center;
+  }
+ 
+  .profile__job{
+    margin: auto;
+    text-align: center;
+  }
+
+
 }
