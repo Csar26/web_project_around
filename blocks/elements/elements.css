@@ -2,24 +2,22 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 880px;
-  margin: auto;
+  margin: 50px auto 60px;
   row-gap: 20px;
   column-gap: 17px;
-  border-radius: 10%
 }
 .element {
   display: flex;
   flex-direction: column;
-  width: 100%;
   width: 282px;
-  height: 361px;
   background-color: black;
+  border-radius: 10px;
   margin: 0;
+  overflow: hidden;
 }
 
 .element__image {
   width: 100%;
-  border-radius: 10px, 10px, 0px, 0px;
   background-color: black;
 }
 
@@ -50,6 +48,11 @@
   border: none;
   background-color: white;
 }
+
+.element__like:hover {
+  opacity: 0.7;
+}
+
 @media screen and (max-width: 767px) and (min-width: 319px) {
   .elements {
     display: flex;

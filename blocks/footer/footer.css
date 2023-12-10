@@ -4,6 +4,7 @@
   width: 880px;
   justify-content: flex-start;
   margin: auto;
+  padding-bottom: 60px;
 }
 .footer__author {
   color: #545454;

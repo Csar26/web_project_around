@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 415px;
+  width: 550px;
   height: 77px;
   margin-right: 0;
 }
@@ -62,7 +62,6 @@
 
   .profile_info {
     align-items: center;
-
   }
 
   .profile__name {
@@ -74,11 +73,9 @@
     line-height: 27px;
     text-align: center;
   }
- 
-  .profile__job{
+
+  .profile__job {
     margin: auto;
     text-align: center;
   }
-
-
 }
