@@ -8,6 +8,7 @@
 }
 .element {
   display: flex;
+  position: relative;
   flex-direction: column;
   width: 282px;
   background-color: black;

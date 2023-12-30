@@ -29,9 +29,13 @@ formProfile.addEventListener("submit", function(event){
 });
 
 
-const addButton = document.querySelector(".add-button");
-const popupaddElement = document.querySelector(".popup_content_edit_profile");
 
+const addButton = document.querySelector(".add-button");
+const popupaddElement = document.querySelector(".popup_content_add-element");
+const closeButtonNewPlace = popupaddElement.querySelector(".popup__button-close_new-place")
+const formProfileNewPlace = popupaddElement.querySelector(".popup__form_new-place");
+const inputNameNewPlace = popupaddElement.querySelector(".form__input[name='name']");
+const inputjobNewPlace = popupaddElement.querySelector(".form__input[name='job']");
 
 
 function tooglePopup(popup){
@@ -50,8 +54,8 @@ formProfile.addEventListener("submit", function(event){
   profileName.textContent = inputName.value;
   profilejob.textContent = inputjob.value;
   formProfile.reset();
-  tooglePopup(popupProfile);
-})
+  tooglePopup(popupaddElement);
+});
 
 const cards = [
   {
@@ -88,7 +92,7 @@ const element = template.querySelector(".element").cloneNode(true);
 const elementImage = element.querySelector(".element__image");
 const elementTitle = element.querySelector(".element__title");
 
-const buttonDelete = element.querySelector(".button_delete");
+const buttonDelete = element.querySelector(".button-delete");
 const buttonlike = element.querySelector(".element__like");
 
 elementImage.src = item.link
@@ -101,7 +105,7 @@ buttonDelete.addEventListener ("click", function (){
 elementLike.addEventListener("click", function() {
   elementLike.classList.toggle("element__like-click")
 });
-
-
-
 });
+
+
+
