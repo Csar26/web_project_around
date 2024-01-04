@@ -8,6 +8,7 @@ const formProfile = popupProfile.querySelector(".popup__form");
 const inputName = popupProfile.querySelector(".form__input[name='name']");
 const inputjob = popupProfile.querySelector(".form__input[name='job']");
 
+const popupImage = document.querySelector(".popup_content_image");
 
 function tooglePopup(popup) {
   popup.classList.toggle("popup_show");
@@ -107,12 +108,19 @@ cards.forEach(function (item) {
   buttonlike.addEventListener("click", function () {
     buttonlike.classList.toggle("element__like-click");
   });
-  
+
+ 
   
   elementImage.addEventListener("click", function () {
-  popup.classList.toggle("popup_show")
+  popupImage.classList.toggle("popup_show")
+  popupImage.querySelector('.popup__image').src = item.link;
+  popupImage.querySelector('.popup__title').textContent = item.name;
+  elementImage.reset();
+  tooglePopup(popupImage);
+  
+  
+  
   });
-
 
   container.append(element);
 
@@ -126,10 +134,10 @@ formProfile.addEventListener("submit", function (event) {
   profilejob.textContent = inputjob.value;
   formProfile.reset();
   tooglePopup(popupaddElement);
-  */
+  
  
   
-const popupImage = document.querySelector(".popup_content_image");
+
 
 
 

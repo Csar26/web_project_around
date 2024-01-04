@@ -50,6 +50,7 @@
   justify-content: center;
   border: none;
   background-color: white;
+  background-image: url(../../images/like\ vector.svg);
 }
 
 .element__like:hover {
@@ -57,7 +58,7 @@
 }
 
 .element__like-click {
-  background-color: black;
+  background-image: url(../../images/like_black_vector.svg);
 }
 
 @media screen and (max-width: 767px) and (min-width: 319px) {
