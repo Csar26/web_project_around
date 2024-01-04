@@ -9,6 +9,12 @@ const inputName = popupProfile.querySelector(".form__input[name='name']");
 const inputjob = popupProfile.querySelector(".form__input[name='job']");
 
 const popupImage = document.querySelector(".popup_content_image");
+const closeButtonImage = popupImage.querySelector(".popup__button-close");
+
+
+closeButtonImage.addEventListener("click", function (){
+  tooglePopup(popupImage);
+});
 
 function tooglePopup(popup) {
   popup.classList.toggle("popup_show");
@@ -29,6 +35,8 @@ formProfile.addEventListener("submit", function (event) {
   tooglePopup(popupProfile);
 });
 
+
+
 const addButton = document.querySelector(".add-button");
 const popupaddElement = document.querySelector(".popup_content_add-element");
 const closeButtonNewPlace = popupaddElement.querySelector(
@@ -36,10 +44,10 @@ const closeButtonNewPlace = popupaddElement.querySelector(
 );
 const formProfileNewPlace = popupaddElement.querySelector(".popup__form");
 const inputNameNewPlace = popupaddElement.querySelector(
-  ".form__input[name='name']"
+  ".form__input[name='title']"
 );
 const inputjobNewPlace = popupaddElement.querySelector(
-  ".form__input[name='job']"
+  ".form__input[name='image Url']"
 );
 
 
@@ -53,11 +61,12 @@ closeButtonNewPlace.addEventListener("click", function () {
 
 formProfile.addEventListener("submit", function (event) {
   event.preventDefault();
-  profileName.textContent = inputName.value;
-  profilejob.textContent = inputjob.value;
+  inputNameNewPlace.textContent = inputName.value;
+  inputjobNewPlace.textContent = inputjob.value;
   formProfile.reset();
   tooglePopup(popupaddElement);
 });
+
 
 const cards = [
   {
@@ -87,6 +96,7 @@ const cards = [
 ];
 
 const container = document.querySelector(".elements");
+
 cards.forEach(function (item) {
   const template = document.querySelector(".card-template").content;
   const element = template.querySelector(".element").cloneNode(true);
@@ -112,13 +122,9 @@ cards.forEach(function (item) {
  
   
   elementImage.addEventListener("click", function () {
-  popupImage.classList.toggle("popup_show")
   popupImage.querySelector('.popup__image').src = item.link;
   popupImage.querySelector('.popup__title').textContent = item.name;
-  elementImage.reset();
   tooglePopup(popupImage);
-  
-  
   
   });
 
