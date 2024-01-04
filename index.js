@@ -49,21 +49,26 @@ const inputNameNewPlace = popupaddElement.querySelector(
 const inputjobNewPlace = popupaddElement.querySelector(
   ".form__input[name='image Url']"
 );
+const formNewCard = popupaddElement.querySelector('.popup__form');
 
+
+formNewCard.addEventListener('submit', event => {
+  event.preventDefault();
+  const item = {
+    name: formNewCard.elements['title'].value, 
+    link: formNewCard.elements['link'].value, 
+  }
+  const newCard = createCard(item);
+  container.prepend(newCard);
+  formNewCard.reset();
+  tooglePopup(popupaddElement);
+})
 
 addButton.addEventListener("click", function () {
   tooglePopup(popupaddElement);
 });
 
 closeButtonNewPlace.addEventListener("click", function () {
-  tooglePopup(popupaddElement);
-});
-
-formProfile.addEventListener("submit", function (event) {
-  event.preventDefault();
-  inputNameNewPlace.textContent = inputName.value;
-  inputjobNewPlace.textContent = inputjob.value;
-  formProfile.reset();
   tooglePopup(popupaddElement);
 });
 
@@ -97,7 +102,8 @@ const cards = [
 
 const container = document.querySelector(".elements");
 
-cards.forEach(function (item) {
+
+function createCard(item){
   const template = document.querySelector(".card-template").content;
   const element = template.querySelector(".element").cloneNode(true);
   
@@ -127,10 +133,13 @@ cards.forEach(function (item) {
   tooglePopup(popupImage);
   
   });
+  return element;
+}
 
-  container.append(element);
-
-
+cards.forEach(function (item) {
+  
+  const newCard = createCard(item);
+  container.append(newCard);
 
 });
 /*
