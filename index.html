@@ -21,14 +21,17 @@
             class="avatar"
           />
           <div class="profile_info">
-            <p class="profile__name">Jacques Cousteau 
+            <div class="profile__name-area">
+
+            <p class="profile__name">Jacques Cousteau </p>
             <button class="profile__button">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0.5" y="0.5" width="23" height="23" stroke="white"/>
                 <path d="M17 8.32827L9.60377 15.7666L8.28302 14.4194L15.6604 7L17 8.32827ZM7 17L8.96226 16.4118L7.58491 15.0835L7 17Z" fill="white"/>
                 </svg>
             </button>
-          </p>
+          </div>
+          
             <h3 class="profile__job">Explorer</h3>
 
           </div>
@@ -96,7 +99,7 @@
             />
           </svg>
         </button>      
-        <form class="popup__form">
+        <form class="popup__form_add-element">
           <label for="input-name" class="popup__label"
             >New Place</label
           >
@@ -106,8 +109,8 @@
             <input
               type="text"
               class="form__input"
-              name="name"
-              value="Title"
+              name="Title"
+              placeholder="Title"
             />
             <span class="form__error"></span>
             <label for="input-name" class="popup__label">
@@ -115,8 +118,8 @@
             <input
               type="text"
               class="form__input"
-              name="job"
-              value="image Url"
+              name="link"
+              placeholder="link"
             />
             <span class="form__error"></span>
           </fieldset>

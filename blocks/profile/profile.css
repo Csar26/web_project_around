@@ -16,6 +16,11 @@
   margin-right: 0;
 }
 
+.profile__name-area {
+  display: flex;
+  align-items: center;
+}
+
 .profile__name {
   color: #ffffff;
   font-family: Inter;
@@ -38,7 +43,6 @@
 }
 
 .profile__button {
-  position: absolute;
   align-self: last baseline;
   transition: ease 1s;
   background-color: black;
