@@ -11,8 +11,7 @@ const inputjob = popupProfile.querySelector(".form__input[name='job']");
 const popupImage = document.querySelector(".popup_content_image");
 const closeButtonImage = popupImage.querySelector(".popup__button-close");
 
-
-closeButtonImage.addEventListener("click", function (){
+closeButtonImage.addEventListener("click", function () {
   tooglePopup(popupImage);
 });
 
@@ -35,8 +34,6 @@ formProfile.addEventListener("submit", function (event) {
   tooglePopup(popupProfile);
 });
 
-
-
 const addButton = document.querySelector(".add-button");
 const popupaddElement = document.querySelector(".popup_content_add-element");
 const closeButtonNewPlace = popupaddElement.querySelector(
@@ -49,20 +46,19 @@ const inputNameNewPlace = popupaddElement.querySelector(
 const inputjobNewPlace = popupaddElement.querySelector(
   ".form__input[name='image Url']"
 );
-const formNewCard = popupaddElement.querySelector('.popup__form');
+const formNewCard = popupaddElement.querySelector(".popup__form");
 
-
-formNewCard.addEventListener('submit', event => {
+formNewCard.addEventListener("submit", (event) => {
   event.preventDefault();
   const item = {
-    name: formNewCard.elements['title'].value, 
-    link: formNewCard.elements['link'].value, 
-  }
+    name: formNewCard.elements["title"].value,
+    link: formNewCard.elements["link"].value,
+  };
   const newCard = createCard(item);
   container.prepend(newCard);
   formNewCard.reset();
   tooglePopup(popupaddElement);
-})
+});
 
 addButton.addEventListener("click", function () {
   tooglePopup(popupaddElement);
@@ -71,7 +67,6 @@ addButton.addEventListener("click", function () {
 closeButtonNewPlace.addEventListener("click", function () {
   tooglePopup(popupaddElement);
 });
-
 
 const cards = [
   {
@@ -83,7 +78,7 @@ const cards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lake-louise.jpg",
   },
   {
-    name: "MontaÃ±as Calvas",
+    name: "Montañas Calvas",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/bald-mountains.jpg",
   },
   {
@@ -102,11 +97,9 @@ const cards = [
 
 const container = document.querySelector(".elements");
 
-
-function createCard(item){
+function createCard(item) {
   const template = document.querySelector(".card-template").content;
   const element = template.querySelector(".element").cloneNode(true);
-  
 
   const elementImage = element.querySelector(".element__image");
   const elementTitle = element.querySelector(".element__title");
@@ -125,22 +118,17 @@ function createCard(item){
     buttonlike.classList.toggle("element__like-click");
   });
 
- 
-  
   elementImage.addEventListener("click", function () {
-  popupImage.querySelector('.popup__image').src = item.link;
-  popupImage.querySelector('.popup__title').textContent = item.name;
-  tooglePopup(popupImage);
-  
+    popupImage.querySelector(".popup__image").src = item.link;
+    popupImage.querySelector(".popup__title").textContent = item.name;
+    tooglePopup(popupImage);
   });
   return element;
 }
 
 cards.forEach(function (item) {
-  
   const newCard = createCard(item);
   container.append(newCard);
-
 });
 /*
 formProfile.addEventListener("submit", function (event) {
