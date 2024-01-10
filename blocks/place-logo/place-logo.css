@@ -1,4 +1,4 @@
-.place_logo {
+.place-logo {
   display: block;
   margin: auto;
   width: 880px;
@@ -6,7 +6,7 @@
   padding-top: 45px;
 }
 @media screen and (max-width: 767px) and (min-width: 320px) {
-  .place_logo {
+  .place-logo {
     width: 320px;
     margin: auto;
     row-gap: 30px;
