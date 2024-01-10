@@ -7,7 +7,7 @@
   column-gap: 30px;
 }
 
-.profile_info {
+.profile__info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -64,7 +64,7 @@
     row-gap: 30px;
   }
 
-  .profile_info {
+  .profile__info {
     align-items: center;
   }
 
