@@ -37,7 +37,7 @@
   margin: 0;
 }
 
-.popup__content_image {
+.popup__content-image {
   position: relative;
   z-index: 1;
 }
