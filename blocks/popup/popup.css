@@ -91,7 +91,7 @@
   align-self: baseline;
 }
 
-.form__submit {
+.form_submit {
   background-color: black;
   color: white;
   width: 358px;
@@ -101,17 +101,17 @@
   border: none;
 }
 
-.form__submit:hover {
+.form_submit:hover {
   opacity: 0.7;
 }
 
-.form__set {
+.form_set {
   align-items: center;
   justify-content: center;
   border: none;
 }
 
-.form__input {
+.form_input {
   border-bottom: 0ch;
   width: 358px;
   border: 1px solid rgba(0, 0, 0, 1);
@@ -138,14 +138,14 @@
     height: 14px;
   }
 
-  .form__input {
+  .form_input {
     width: 238px;
   }
 
-  .form__set {
+  .form_set {
     width: 238px;
   }
-  .form__submit {
+  .form_submit {
     width: 238px;
   }
 

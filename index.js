@@ -1,12 +1,12 @@
 const buttonEdit = document.querySelector(".profile__button");
-const popupProfile = document.querySelector(".popup__content_edit-profile");
+const popupProfile = document.querySelector(".popup_content_edit-profile");
 const closeButton = popupProfile.querySelector(".popup__button-close");
 
 const profileName = document.querySelector(".profile__name");
 const profilejob = document.querySelector(".profile__job");
 const formProfile = popupProfile.querySelector(".popup__form");
-const inputName = popupProfile.querySelector(".form__input[name='name']");
-const inputjob = popupProfile.querySelector(".form__input[name='job']");
+const inputName = popupProfile.querySelector(".form_input[name='name']");
+const inputjob = popupProfile.querySelector(".form_input[name='job']");
 
 const popupImage = document.querySelector(".popup_content_image");
 const closeButtonImage = popupImage.querySelector(".popup__button-close");
@@ -41,10 +41,10 @@ const closeButtonNewPlace = popupaddElement.querySelector(
 );
 const formProfileNewPlace = popupaddElement.querySelector(".popup__form");
 const inputNameNewPlace = popupaddElement.querySelector(
-  ".form__input[name='title']"
+  ".form_input[name='title']"
 );
 const inputjobNewPlace = popupaddElement.querySelector(
-  ".form__input[name='image Url']"
+  ".form_input[name='image Url']"
 );
 const formNewCard = popupaddElement.querySelector(".popup__form");
 
