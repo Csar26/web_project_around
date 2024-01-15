@@ -61,7 +61,7 @@
   background-image: url(../../images/like_black_vector.svg);
 }
 
-@media screen and (max-width: 767px) and (min-width: 319px) {
+@media screen and (max-width: 768px) and (min-width: 320px) {
   .elements {
     display: flex;
     flex-direction: column;
