@@ -3,10 +3,10 @@ const popupProfile = document.querySelector(".popup_content_edit-profile");
 const closeButton = popupProfile.querySelector(".popup__button-close");
 
 const profileName = document.querySelector(".profile__name");
-const profilejob = document.querySelector(".profile__job");
+const profileJob = document.querySelector(".profile__job");
 const formProfile = popupProfile.querySelector(".popup__form");
 const inputName = popupProfile.querySelector(".form_input[name='name']");
-const inputjob = popupProfile.querySelector(".form_input[name='job']");
+const inputJob = popupProfile.querySelector(".form_input[name='job']");
 
 const popupImage = document.querySelector(".popup_content_image");
 const closeButtonImage = popupImage.querySelector(".popup__button-close");
@@ -29,24 +29,24 @@ closeButton.addEventListener("click", function () {
 formProfile.addEventListener("submit", function (event) {
   event.preventDefault();
   profileName.textContent = inputName.value;
-  profilejob.textContent = inputjob.value;
+  profileJob.textContent = inputJob.value;
   formProfile.reset();
   tooglePopup(popupProfile);
 });
 
 const addButton = document.querySelector(".add-button");
-const popupaddElement = document.querySelector(".popup_content_add-element");
-const closeButtonNewPlace = popupaddElement.querySelector(
+const popupAddElement = document.querySelector(".popup_content_add-element");
+const closeButtonNewPlace = popupAddElement.querySelector(
   ".popup__button-close"
 );
-const formProfileNewPlace = popupaddElement.querySelector(".popup__form");
-const inputNameNewPlace = popupaddElement.querySelector(
+const formProfileNewPlace = popupAddElement.querySelector(".popup__form");
+const inputNameNewPlace = popupAddElement.querySelector(
   ".form_input[name='title']"
 );
-const inputjobNewPlace = popupaddElement.querySelector(
+const inputJobNewPlace = popupAddElement.querySelector(
   ".form_input[name='image Url']"
 );
-const formNewCard = popupaddElement.querySelector(".popup__form");
+const formNewCard = popupAddElement.querySelector(".popup__form");
 
 formNewCard.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -57,15 +57,15 @@ formNewCard.addEventListener("submit", (event) => {
   const newCard = createCard(item);
   container.prepend(newCard);
   formNewCard.reset();
-  tooglePopup(popupaddElement);
+  tooglePopup(popupAddElement);
 });
 
 addButton.addEventListener("click", function () {
-  tooglePopup(popupaddElement);
+  tooglePopup(popupAddElement);
 });
 
 closeButtonNewPlace.addEventListener("click", function () {
-  tooglePopup(popupaddElement);
+  tooglePopup(popupAddElement);
 });
 
 const cards = [
@@ -105,17 +105,17 @@ function createCard(item) {
   const elementTitle = element.querySelector(".element__title");
 
   const buttonDelete = element.querySelector(".button-delete");
-  const buttonlike = element.querySelector(".element__like");
+  const buttonLike = element.querySelector(".element__like");
 
   elementImage.src = item.link;
-  elementTitle.innerText = item.name;
+  elementTitle.textContent = item.name;
 
   buttonDelete.addEventListener("click", function () {
     element.remove();
   });
 
-  buttonlike.addEventListener("click", function () {
-    buttonlike.classList.toggle("element__like-click");
+  buttonLike.addEventListener("click", function () {
+    buttonLike.classList.toggle("element__like-click");
   });
 
   elementImage.addEventListener("click", function () {
@@ -134,9 +134,9 @@ cards.forEach(function (item) {
 formProfile.addEventListener("submit", function (event) {
   event.preventDefault();
   profileName.textContent = inputName.value;
-  profilejob.textContent = inputjob.value;
+  profileJob.textContent = inputJob.value;
   formProfile.reset();
-  tooglePopup(popupaddElement);
+  tooglePopup(popupAddElement);
   
  
   
@@ -153,18 +153,18 @@ popupImage.append(elementImage)
 
 /*
 addButton.addEventListener("click", function () {
-  tooglePopup(popupaddElement);
+  tooglePopup(popupAddElement);
 });
 
 closeButtonNewPlace.addEventListener("click", function () {
-  tooglePopup(popupaddElement);
+  tooglePopup(popupAddElement);
 });
 
 formProfile.addEventListener("submit", function (event) {
   event.preventDefault();
   profileName.textContent = inputName.value;
-  profilejob.textContent = inputjob.value;
+  profileJob.textContent = inputJob.value;
   formProfile.reset();
-  tooglePopup(popupaddElement);
+  tooglePopup(popupAddElement);
 });
 */
