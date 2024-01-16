@@ -109,6 +109,10 @@ function createCard(item) {
 
   elementImage.src = item.link;
   elementTitle.textContent = item.name;
+  elementImage.alt = item.name;
+  
+
+
 
   buttonDelete.addEventListener("click", function () {
     element.remove();
@@ -121,6 +125,7 @@ function createCard(item) {
   elementImage.addEventListener("click", function () {
     popupImage.querySelector(".popup__image").src = item.link;
     popupImage.querySelector(".popup__title").textContent = item.name;
+    popupImage.querySelector(".popup__image").alt = item.name;
     tooglePopup(popupImage);
   });
   return element;
