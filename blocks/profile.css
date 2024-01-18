@@ -12,9 +12,12 @@
   flex-direction: column;
   align-items: flex-start;
   width: 550px;
-  height: 77px;
+  height: 100px;
   margin-right: 0;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  
 }
 
 .profile__name-area {
@@ -32,17 +35,27 @@
   margin: 0;
   width: 415px;
   height: 39px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   overflow: hidden;
   
 }
 .profile__job {
+  letter-spacing: 0em;
   width: 415px;
+  height: 22px;
   font-family: Inter;
   font-size: 18px;
   font-weight: 400;
   line-height: 22px;
   text-align: left;
   color: #ffffff;
+   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  
+  
+  
 }
 
 .profile__button {
@@ -57,7 +70,7 @@
   opacity: 0.3;
 }
 
-@media screen and (max-width: 768px) and (min-width: 320px) {
+@media screen and (max-width: 320px) {
   .profile {
     display: flex;
     flex-direction: column;
