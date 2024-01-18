@@ -17,7 +17,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  
 }
 
 .profile__name-area {
@@ -38,7 +37,6 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  
 }
 .profile__job {
   letter-spacing: 0em;
@@ -50,12 +48,9 @@
   line-height: 22px;
   text-align: left;
   color: #ffffff;
-   overflow: hidden;
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  
-  
-  
 }
 
 .profile__button {
@@ -70,7 +65,7 @@
   opacity: 0.3;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 767px) {
   .profile {
     display: flex;
     flex-direction: column;
@@ -82,6 +77,7 @@
 
   .profile__info {
     align-items: center;
+    width: 320px;
   }
 
   .profile__name {
@@ -95,7 +91,6 @@
   }
 
   .profile__job {
-    margin: auto;
     text-align: center;
   }
 }

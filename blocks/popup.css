@@ -132,7 +132,7 @@
   border: 1px solid rgba(0, 0, 0, 1);
 }
 
-@media screen and  (max-width: 320px) {
+@media screen and  (max-width: 767px) {
   .popup__content {
     width: 288px;
     height: 322px;
