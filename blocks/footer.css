@@ -16,7 +16,7 @@
   font-style: normal;
   width: 318px;
 }
-@media screen and  (max-width: 767px) {
+@media screen and  (max-width: 880px) {
   .footer {
     justify-content: center;
     text-align: center;

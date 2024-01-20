@@ -5,7 +5,7 @@
   border: 1px;
   padding-top: 45px;
 }
-@media screen and  (max-width: 767px) {
+@media screen and  (max-width: 880px) {
   .place-logo {
     width: 320px;
     margin: auto;
