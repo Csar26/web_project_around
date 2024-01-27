@@ -132,6 +132,20 @@
   border: 1px solid rgba(0, 0, 0, 1);
 }
 
+.form_input:valid{
+  border-bottom: 1px green solid;
+  
+}
+
+.form_input_has-error{
+  border-bottom : 1px darkred solid;
+}
+
+.form_error{
+  color: darkred;
+  font-size: 12px;
+}
+
 @media screen and  (max-width: 880px) {
   .popup__content {
     width: 288px;

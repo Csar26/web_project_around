@@ -10,30 +10,6 @@ const inputJob = popupProfile.querySelector(".form_input[name='job']");
 
 const popupImage = document.querySelector(".popup_content_image");
 const closeButtonImage = popupImage.querySelector(".popup__button-close");
-
-closeButtonImage.addEventListener("click", function () {
-  tooglePopup(popupImage);
-});
-
-function tooglePopup(popup) {
-  popup.classList.toggle("popup_show");
-}
-buttonEdit.addEventListener("click", function () {
-  tooglePopup(popupProfile);
-});
-
-closeButton.addEventListener("click", function () {
-  tooglePopup(popupProfile);
-});
-
-formProfile.addEventListener("submit", function (event) {
-  event.preventDefault();
-  profileName.textContent = inputName.value;
-  profileJob.textContent = inputJob.value;
-  formProfile.reset();
-  tooglePopup(popupProfile);
-});
-
 const addButton = document.querySelector(".add-button");
 const popupAddElement = document.querySelector(".popup_content_add-element");
 const closeButtonNewPlace = popupAddElement.querySelector(
@@ -47,26 +23,7 @@ const inputJobNewPlace = popupAddElement.querySelector(
   ".form_input[name='image Url']"
 );
 const formNewCard = popupAddElement.querySelector(".popup__form");
-
-formNewCard.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const item = {
-    name: formNewCard.elements["title"].value,
-    link: formNewCard.elements["link"].value,
-  };
-  const newCard = createCard(item);
-  container.prepend(newCard);
-  formNewCard.reset();
-  tooglePopup(popupAddElement);
-});
-
-addButton.addEventListener("click", function () {
-  tooglePopup(popupAddElement);
-});
-
-closeButtonNewPlace.addEventListener("click", function () {
-  tooglePopup(popupAddElement);
-});
+const container = document.querySelector(".elements");
 
 const cards = [
   {
@@ -95,7 +52,56 @@ const cards = [
   },
 ];
 
-const container = document.querySelector(".elements");
+
+
+
+closeButtonImage.addEventListener("click", function () {
+  tooglePopup(popupImage);
+});
+
+function tooglePopup(popup) {
+  popup.classList.toggle("popup_show");
+}
+buttonEdit.addEventListener("click", function () {
+  tooglePopup(popupProfile);
+});
+
+closeButton.addEventListener("click", function () {
+  tooglePopup(popupProfile);
+});
+
+formProfile.addEventListener("submit", function (event) {
+  event.preventDefault();
+  profileName.textContent = inputName.value;
+  profileJob.textContent = inputJob.value;
+  formProfile.reset();
+  tooglePopup(popupProfile);
+});
+
+
+
+formNewCard.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const item = {
+    name: formNewCard.elements["title"].value,
+    link: formNewCard.elements["link"].value,
+  };
+  const newCard = createCard(item);
+  container.prepend(newCard);
+  formNewCard.reset();
+  tooglePopup(popupAddElement);
+});
+
+addButton.addEventListener("click", function () {
+  tooglePopup(popupAddElement);
+});
+
+closeButtonNewPlace.addEventListener("click", function () {
+  tooglePopup(popupAddElement);
+});
+
+
+
 
 function createCard(item) {
   const template = document.querySelector(".card-template").content;

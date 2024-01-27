@@ -54,28 +54,38 @@
           <button class="popup__button-close">
             <img src="images/Close_Icon.svg" alt="" />
           </button>
-          <form class="popup__form popup__form_edit-profile">
+          <form class="popup__form popup__form_edit-profile" novalidate>
             <label for="input-name" class="popup__label">Edit Profile</label>
             <fieldset class="popup__set">
               <label for="input-name" class="popup__label popup__label_edit">
               </label>
               <input
+              placeholder="Name"
+              minlength="2"
+              maxlength="40"
+              pattern="[a-zA-Z]*"
                 type="text"
                 id="input-name"
                 class="form form_input"
                 name="name"
                 value="Jacques Cousteau"
+                required
               />
-              <span class="form form_error"></span>
+              <span class="form__error form__error_idex_username "></span>
               <label for="input-name" class="popup__label popup__label_edit">
               </label>
               <input
+              placeholder="About"
+              minlength="2"
+              maxlength="200"
                 type="text"
+                id="input-about"
                 class="form form_input"
                 name="job"
                 value="Explorer"
+                required
               />
-              <span class="form form_error"></span>
+              <span class="form__error form__error_index_about"></span>
             </fieldset>
             <fieldset class="form form_set">
               <button type="submit" class="form form_submit">Save</button>
@@ -99,6 +109,8 @@
               <label for="input-name" class="popup__label"> </label>
               <input
                 type="text"
+                minlength="2"
+                maxlength="30"
                 class="form form_input"
                 name="title"
                 placeholder="Title"
@@ -106,7 +118,7 @@
               <span class="form form_error"></span>
               <label for="input-name" class="popup__label"> </label>
               <input
-                type="text"
+                type="url"
                 class="form form_input"
                 name="link"
                 placeholder="link"
@@ -150,6 +162,7 @@
         </div>
       </template>
       <script src="index.js"></script>
+      <script src="validate.js"></script>
     </div>
   </body>
 </html>
