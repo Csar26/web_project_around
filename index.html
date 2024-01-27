@@ -62,8 +62,7 @@
               <input
               placeholder="Name"
               minlength="2"
-              maxlength="40"
-              pattern="[a-zA-Z]*"
+              maxlength="40"            
                 type="text"
                 id="input-name"
                 class="form form_input"
@@ -71,7 +70,7 @@
                 value="Jacques Cousteau"
                 required
               />
-              <span class="form__error form__error_idex_username "></span>
+              <span class="form__error form__error_index_name "></span>
               <label for="input-name" class="popup__label popup__label_edit">
               </label>
               <input
@@ -110,20 +109,22 @@
               <input
                 type="text"
                 minlength="2"
+                required
                 maxlength="30"
                 class="form form_input"
                 name="title"
                 placeholder="Title"
               />
-              <span class="form form_error"></span>
+              <span class="form form_error form__error_index_title"></span>
               <label for="input-name" class="popup__label"> </label>
               <input
                 type="url"
+                required
                 class="form form_input"
                 name="link"
                 placeholder="link"
               />
-              <span class="form form_error"></span>
+              <span class="form form_error form__error_index_link"></span>
             </fieldset>
             <fieldset class="popup__set">
               <button type="submit" class="form form_submit">Create</button>
