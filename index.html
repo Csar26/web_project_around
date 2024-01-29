@@ -63,7 +63,6 @@
               placeholder="Name"
               minlength="2"
               maxlength="40"
-              pattern="[a-zA-Z]*"
                 type="text"
                 id="input-name"
                 class="form form_input"
@@ -71,11 +70,12 @@
                 value="Jacques Cousteau"
                 required
               />
-              <span class="form__error form__error_idex_username "></span>
+              <span class="form form__error form__error_index_name"></span>
               <label for="input-name" class="popup__label popup__label_edit">
               </label>
               <input
               placeholder="About"
+              required
               minlength="2"
               maxlength="200"
                 type="text"
@@ -83,9 +83,8 @@
                 class="form form_input"
                 name="job"
                 value="Explorer"
-                required
               />
-              <span class="form__error form__error_index_about"></span>
+              <span class="form form__error form__error_index_about"></span>
             </fieldset>
             <fieldset class="form form_set">
               <button type="submit" class="form form_submit">Save</button>
@@ -103,27 +102,29 @@
               alt="Imagen boton cerrar ventana"
             />
           </button>
-          <form class="popup__form popup__form_add-element">
+          <form class="popup__form popup__form_add-element" novalidate>
             <label for="input-name" class="popup__label">New Place</label>
             <fieldset class="popup__set">
               <label for="input-name" class="popup__label"> </label>
               <input
                 type="text"
+                required
                 minlength="2"
                 maxlength="30"
                 class="form form_input"
                 name="title"
                 placeholder="Title"
               />
-              <span class="form form_error"></span>
+              <span class="form form__error form__error_index_title"></span>
               <label for="input-name" class="popup__label"> </label>
               <input
                 type="url"
+                required
                 class="form form_input"
                 name="link"
                 placeholder="link"
               />
-              <span class="form form_error"></span>
+              <span class="form form__error form__error_index_link"></span>
             </fieldset>
             <fieldset class="popup__set">
               <button type="submit" class="form form_submit">Create</button>

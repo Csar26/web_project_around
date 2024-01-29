@@ -84,7 +84,6 @@
   justify-content: center;
   color: black;
   align-items: baseline;
-  border: none;
   margin-left: 30px;
   column-gap: 0;
 }
@@ -133,17 +132,21 @@
 }
 
 .form_input:valid{
-  border-bottom: 1px green solid;
+  border-bottom: 2px green solid;
   
 }
 
 .form_input_has-error{
-  border-bottom : 1px darkred solid;
+  border-bottom : 2px blue;
 }
 
 .form_error{
-  color: darkred;
+  color: red;
   font-size: 12px;
+}
+
+.form_submit:disabled{
+  background-color: grey;
 }
 
 @media screen and  (max-width: 880px) {
