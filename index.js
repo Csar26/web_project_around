@@ -185,7 +185,7 @@ overlays.forEach(function (overlay) {
 
 
 function pressEscapeHandler (event) {
-  if(event.key === "Escape"){
+  if(event.key === "Esc"){
     const popups = document.querySelectorAll(".popup");
     popups.forEach(function (popup){
     if (popup.classList.contains("popup_show")) {
