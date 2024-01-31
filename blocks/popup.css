@@ -137,7 +137,7 @@
 }
 
 .form_input_has-error{
-  border-bottom : 2px blue;
+  border-bottom : 2px darkred solid;
 }
 
 .form_error{

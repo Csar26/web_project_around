@@ -141,6 +141,56 @@ cards.forEach(function (item) {
   const newCard = createCard(item);
   container.append(newCard);
 });
+
+
+ 
+
+//cerrar con click overlay
+
+const popupOverlay = document.querySelector(".popup__overlay");
+const closePopup = document.querySelector(".popup");
+
+popupOverlay.addEventListener("click", function () {
+  tooglePopup(closePopup);
+});
+
+
+const overlayProfile = popupProfile.querySelector(".popup__overlay");
+const overlayAddElement = popupAddElement.querySelector(".popup__overlay");
+const overlayImage = popupImage.querySelector(".popup__overlay");
+const overlays = [overlayProfile, overlayAddElement, overlayImage];
+
+
+overlays.forEvery(function (overlay) {
+  overlay.addEventListener("click" function (event) {
+    const closePopup = overlay.closest(".popup"),
+    tooglePopup(closePopup);
+  });
+});
+
+
+
+/*
+document.addEventListener("keydown" function (event){
+
+  if(event.key === "Escape"){
+    const popups = document.documentElementAll("popup");
+    tooglePopup(closePopup);
+    popups.forEach(function (popup){
+      if (popup.classList.contains("popup_show")) {
+        tooglePopup(popup);
+      }
+    })
+  }
+})
+
+*/
+
+
+
+
+
+
 /*
 formProfile.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -149,19 +199,19 @@ formProfile.addEventListener("submit", function (event) {
   formProfile.reset();
   tooglePopup(popupAddElement);
   
- 
+ */
   
 
 
 
-
+/*
 popupImage.addEventListener("click", function (){
 popup.classList.toggle("popup_show");
 
 popupImage.append(elementImage)
 
 });
-
+*/
 /*
 addButton.addEventListener("click", function () {
   tooglePopup(popupAddElement);
