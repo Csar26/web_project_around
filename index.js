@@ -60,6 +60,11 @@ closeButtonImage.addEventListener("click", function () {
 });
 
 function tooglePopup(popup) {
+  if(popup.classList.contains('popup_show')){
+    document.removeEventListener('keypress', pressEscapeHandler);
+  }else{
+    document.addEventListener('keypress', pressEscapeHandler);
+  }
   popup.classList.toggle("popup_show");
 }
 buttonEdit.addEventListener("click", function () {
@@ -147,28 +152,48 @@ cards.forEach(function (item) {
 
 //cerrar con click overlay
 
-const popupOverlay = document.querySelector(".popup__overlay");
+//const popupOverlay = document.querySelector(".popup__overlay");
 const closePopup = document.querySelector(".popup");
-
+/*
 popupOverlay.addEventListener("click", function () {
   tooglePopup(closePopup);
 });
-
-
+*/
+/*
 const overlayProfile = popupProfile.querySelector(".popup__overlay");
 const overlayAddElement = popupAddElement.querySelector(".popup__overlay");
 const overlayImage = popupImage.querySelector(".popup__overlay");
 const overlays = [overlayProfile, overlayAddElement, overlayImage];
+*/
 
+const overlays = Array.from(document.querySelectorAll('.popup__overlay'));
+console.log(overlays);
 
-overlays.forEvery(function (overlay) {
-  overlay.addEventListener("click" function (event) {
-    const closePopup = overlay.closest(".popup"),
+overlays.forEach(function (overlay) {
+  overlay.addEventListener("click", function (event) {
+    const closePopup = overlay.closest(".popup");
     tooglePopup(closePopup);
   });
 });
 
+/*
+(function (overlay) {
+  overlay.addEventListener("click" function (event) {
+    const closePopup = overlay.closest(".popup"),
+    tooglePopup(closePopup);
+  });
+});*/
 
+function pressEscapeHandler(event) {
+  if(event.key === "Escape"){
+    const popups = document.querySelectorAll(".popup");
+    popups.forEach(function (popup){
+      if (popup.classList.contains("popup_show")) {
+        tooglePopup(popup);
+      }
+    })
+  }
+}
 
 /*
 document.addEventListener("keydown" function (event){
