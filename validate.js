@@ -47,7 +47,7 @@ enableValidation({
   submitButtonSelector: ".form_submit",
   inactiveButtonClass: "popup__button_disabled",
   inputErrorClass: "form_input_has-error",
-  errorClass: "form__error_index_"
+  errorClass: "form_error_index_"
 }); 
 
 
@@ -57,7 +57,7 @@ enableValidation({
 /*
 form.addEventListener("input", (event) => {
   const target = event.target;
-  const errorNode = form.querySelector(`.form__error_index_${target.name}`);
+  const errorNode = form.querySelector(`.form_error_index_${target.name}`);
   console.log(errorNode, `.form__error_index_${target.name}`);
   if (target.validity.valid){
     target.classList.remove(".form_input_has-error");
