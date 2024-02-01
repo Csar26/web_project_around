@@ -140,7 +140,7 @@
   border-bottom : 2px darkred solid;
 }
 
-.form_error{
+.form-error{
   color: red;
   font-size: 12px;
 }
