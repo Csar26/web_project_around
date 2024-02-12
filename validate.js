@@ -16,7 +16,6 @@ const handleInput = (event, configForm) => {
 
 function isvalid(form, configForm) {
   const inputList = Array.from(form.querySelectorAll(configForm.inputSelector));
-  console.log(inputList, form, configForm.inputSelector);
   return inputList.every((item)=>{
     return item.validity.valid;
   })
@@ -32,7 +31,7 @@ const enableValidation = (configForm) => {
       evt.preventDefault();
     });  
 
-    formElement.addEventListener('input', event => {
+    formElement.addEventListener("input", event => {
       handleInput(event, configForm);
     });  
     submitButton.disabled = !isvalid(formElement, configForm);
@@ -49,23 +48,3 @@ enableValidation({
   inputErrorClass: "form_input_has-error",
   errorClass: "form_error_index-"
 }); 
-
-
-
-//const form = document.querySelector(".popup__form");
-
-/*
-form.addEventListener("input", (event) => {
-  const target = event.target;
-  const errorNode = form.querySelector(`.form__error_index_${target.name}`);
-  console.log(errorNode, `.form__error_index_${target.name}`);
-  if (target.validity.valid){
-    target.classList.remove(".form_input_has-error");
-    errorNode.textContent = " ";
-  }else{
-    target.classList.add(".form_input_has-error");
-    errorNode.textContent = target.validationMessage;
-  }
-submitButton.disabled = !isvalid(form);
-})
-*/

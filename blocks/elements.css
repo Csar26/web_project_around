@@ -22,6 +22,10 @@
   width: 282px;
   height: 282px;
 }
+.element__image:hover{
+  cursor: pointer;
+}
+
 
 .element__place {
   display: flex;
@@ -54,14 +58,14 @@
 
 .element__like:hover {
   opacity: 0.7;
-  
+  cursor: pointer;
 }
 
 .element__like-click {
   background-image: url(../../images/like_black_vector.svg);
 }
 
-@media screen and  (max-width: 880px) {
+@media screen and (max-width: 880px) {
   .elements {
     display: flex;
     flex-direction: column;

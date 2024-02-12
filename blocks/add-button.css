@@ -9,6 +9,7 @@
 
 .add-button:hover {
   opacity: 0.3;
+  cursor: pointer;
 }
 
 .add-button__image {
