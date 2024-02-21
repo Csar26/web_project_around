@@ -1,3 +1,9 @@
+import { Card } from "./Card.js";
+import { Popup } from "./utils.js";
+
+
+
+
 const buttonEdit = document.querySelector(".profile__button");
 const popupProfile = document.querySelector(".popup_content_edit-profile");
 const closeButton = popupProfile.querySelector(".popup__button-close");
@@ -152,19 +158,7 @@ cards.forEach(function (item) {
 
 //cerrar con click overlay
 
-//const popupOverlay = document.querySelector(".popup__overlay");
 const closePopup = document.querySelector(".popup");
-/*
-popupOverlay.addEventListener("click", function () {
-  tooglePopup(closePopup);
-});
-*/
-/*
-const overlayProfile = popupProfile.querySelector(".popup__overlay");
-const overlayAddElement = popupAddElement.querySelector(".popup__overlay");
-const overlayImage = popupImage.querySelector(".popup__overlay");
-const overlays = [overlayProfile, overlayAddElement, overlayImage];
-*/
 
 const overlays = Array.from(document.querySelectorAll(".popup__overlay"));
 
@@ -174,14 +168,6 @@ overlays.forEach(function (overlay) {
     tooglePopup(closePopup);
   });
 });
-
-/*
-(function (overlay) {
-  overlay.addEventListener("click" function (event) {
-    const closePopup = overlay.closest(".popup"),
-    tooglePopup(closePopup);
-  });
-});*/
 
 
 function pressEscapeHandler (event) {
@@ -198,62 +184,3 @@ function pressEscapeHandler (event) {
 }
 
 
-/*
-document.addEventListener("keydown" function (event){
-
-  if(event.key === "Escape"){
-    const popups = document.documentElementAll("popup");
-    tooglePopup(closePopup);
-    popups.forEach(function (popup){
-      if (popup.classList.contains("popup_show")) {
-        tooglePopup(popup);
-      }
-    })
-  }
-})
-
-*/
-
-
-
-
-
-
-/*
-formProfile.addEventListener("submit", function (event) {
-  event.preventDefault();
-  profileName.textContent = inputName.value;
-  profileJob.textContent = inputJob.value;
-  formProfile.reset();
-  tooglePopup(popupAddElement);
-  
- */
-  
-
-
-
-/*
-popupImage.addEventListener("click", function (){
-popup.classList.toggle("popup_show");
-
-popupImage.append(elementImage)
-
-});
-*/
-/*
-addButton.addEventListener("click", function () {
-  tooglePopup(popupAddElement);
-});
-
-closeButtonNewPlace.addEventListener("click", function () {
-  tooglePopup(popupAddElement);
-});
-
-formProfile.addEventListener("submit", function (event) {
-  event.preventDefault();
-  profileName.textContent = inputName.value;
-  profileJob.textContent = inputJob.value;
-  formProfile.reset();
-  tooglePopup(popupAddElement);
-});
-*/
