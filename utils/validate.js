@@ -1,4 +1,3 @@
-import { FormValidator } from "./FormValidator.js";
 const handleInput = (event, configForm) => {
   const form = event.target.closest(configForm.formSelector);
   const submitButton = form.querySelector(configForm.submitButtonSelector)
