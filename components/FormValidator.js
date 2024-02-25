@@ -4,7 +4,7 @@ export default class FormValidator {
     this._configForm = config;
   }
 
-  handleInput = (event, configForm) => {
+  _handleInput = (event, configForm) => {
     const form = event.target.closest(this._configForm.formSelector);
     const submitButton = form.querySelector(
       this._configForm.submitButtonSelector
@@ -20,10 +20,10 @@ export default class FormValidator {
       target.classList.add(this._configForm.inputErrorClass);
       errorNode.textContent = target.validationMessage;
     }
-    submitButton.disabled = !this.isvalid(form, configForm);
+    submitButton.disabled = !this._isValid(form, configForm);
   };
 
-  isvalid(form, configForm) {
+  _isValid(form, configForm) {
     const inputList = Array.from(
       form.querySelectorAll(configForm.inputSelector)
     );
@@ -41,8 +41,8 @@ export default class FormValidator {
     });
 
     this._formElement.addEventListener("input", (event) => {
-      this.handleInput(event, this._configForm);
+      this._handleInput(event, this._configForm);
     });
-    submitButton.disabled = !this.isvalid(this._formElement, this._configForm);
+    submitButton.disabled = !this._isValid(this._formElement, this._configForm);
   };
 }

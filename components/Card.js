@@ -1,4 +1,4 @@
-import { popupImage, tooglePopup } from "../utils/utils.js";
+import { popupImage, togglePopup } from "../utils/utils.js";
 export default class Card {
   constructor(title, link, selector) {
     this._title = title;
@@ -33,7 +33,7 @@ export default class Card {
         popupImage.querySelector(".popup__image").src = this._link;
         popupImage.querySelector(".popup__title").textContent = this._title;
         popupImage.querySelector(".popup__image").alt = this._title;
-        tooglePopup(popupImage);
+        togglePopup(popupImage);
       });
   }
 

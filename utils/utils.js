@@ -79,7 +79,7 @@ export const overlays = Array.from(
 export const formValidatorProfile = new FormValidator(formProfile, formConfig);
 export const formValidatorAddCard = new FormValidator(formNewCard, formConfig);
 
-export function tooglePopup(popup) {
+export function togglePopup(popup) {
   if (popup.classList.contains("popup_show")) {
     document.removeEventListener("keypress", pressEscapeHandler);
   } else {
@@ -119,7 +119,7 @@ export function createCardOld(item) {
     popupImage.querySelector(".popup__image").src = item.link;
     popupImage.querySelector(".popup__title").textContent = item.name;
     popupImage.querySelector(".popup__image").alt = item.name;
-    tooglePopup(popupImage);
+    togglePopup(popupImage);
   });
   return element;
 }
@@ -129,7 +129,7 @@ function pressEscapeHandler(event) {
     const popups = document.querySelectorAll(".popup");
     popups.forEach(function (popup) {
       if (popup.classList.contains("popup_show")) {
-        tooglePopup(popup);
+        togglePopup(popup);
       }
     });
   }

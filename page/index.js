@@ -1,6 +1,6 @@
 import {
   closeButtonImage,
-  tooglePopup,
+  togglePopup,
   formProfile,
   profileName,
   profileJob,
@@ -20,25 +20,26 @@ import {
   formValidatorAddCard,
   buttonEdit,
   closeButton,
-} from "./utils/utils.js";
+} from "../utils/utils.js";
+
 
 closeButtonImage.addEventListener("click", function () {
-  tooglePopup(popupImage);
+  togglePopup(popupImage);
 });
 
 buttonEdit.addEventListener("click", function () {
-  tooglePopup(popupProfile);
+  togglePopup(popupProfile);
 });
 
 closeButton.addEventListener("click", function () {
-  tooglePopup(popupProfile);
+  togglePopup(popupProfile);
 });
 formProfile.addEventListener("submit", function (event) {
   event.preventDefault();
   profileName.textContent = inputName.value;
   profileJob.textContent = inputJob.value;
   formProfile.reset();
-  tooglePopup(popupProfile);
+  togglePopup(popupProfile);
 });
 
 formNewCard.addEventListener("submit", (event) => {
@@ -50,13 +51,13 @@ formNewCard.addEventListener("submit", (event) => {
   const newCard = createCard(item);
   container.prepend(newCard);
   formNewCard.reset();
-  tooglePopup(popupAddElement);
+  togglePopup(popupAddElement);
 });
 addButton.addEventListener("click", function () {
-  tooglePopup(popupAddElement);
+  togglePopup(popupAddElement);
 });
 closeButtonNewPlace.addEventListener("click", function () {
-  tooglePopup(popupAddElement);
+  togglePopup(popupAddElement);
 });
 
 cards.forEach(function (item) {
@@ -68,7 +69,7 @@ cards.forEach(function (item) {
 overlays.forEach(function (overlay) {
   overlay.addEventListener("click", function (event) {
     const closePopup = overlay.closest(".popup");
-    tooglePopup(closePopup);
+    togglePopup(closePopup);
   });
 });
 
