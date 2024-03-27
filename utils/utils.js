@@ -90,10 +90,7 @@ export function togglePopup(popup) {
   popup.classList.toggle("popup_show");
 }
 
-export function createCard(item) {
-  const newCard = new Card(item.name, item.link, ".card-template");
-  return newCard.render();
-}
+//export
 
 export function createCardOld(item) {
   const template = document.querySelector(".card-template").content;
