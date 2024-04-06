@@ -4,18 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Around</title>
-    <link rel="stylesheet" href="page/index.css" />
   </head>
   <body>
     <div class="page">
       <header class="header">
         <div class="place-logo">
-          <img src="images/Vector.svg" alt="logo Around" class="logo" />
-          <img src="images/Line.svg" alt="line logo" class="line" />
+          <img src="<%= require('./images/Vector.svg')%>" alt="logo Around" class="logo" />
+          <img src="<%= require('./images/Line.svg')%>" alt="line logo" class="line" />
         </div>
         <section class="profile">
           <img
-            src="images/Avatar.png"
+            src="<%= require('./images/Avatar.png')%>"
             alt="Jacques Cousteau, explorador y Biologo marino."
             class="avatar"
           />
@@ -23,7 +22,7 @@
             <div class="profile__name-area">
               <h1 class="profile__name">Jacques Cousteau</h1>
               <button class="profile__button">
-                <img src="images/Edit_Button.svg" alt="Boton editar perfil" />
+                <img src="<%= require('./images/Edit_Button.svg')%>" alt="Boton editar perfil" />
               </button>
             </div>
 
@@ -33,7 +32,7 @@
             <button class="add-button">
               <img
                 class="add-button__image"
-                src="images/vector_add.svg"
+                src="<%= require('./images/vector_add.svg')%>"
                 alt="Boton agregar imagen"
               />
             </button>
@@ -53,7 +52,7 @@
         <div class="popup__content">
           <button class="popup__button-close">
             <img
-              src="images/Close_Icon.svg"
+              src="<%= require('./images/Close_Icon.svg')%>"
               alt="imagen para cerrar ventana modal"
             />
           </button>
@@ -101,7 +100,7 @@
         <div class="popup__content popup__content_new-place">
           <button class="popup__button-close">
             <img
-              src="images/Close_Icon.svg"
+              src="<%= require('./images/Close_Icon.svg')%>"
               alt="Imagen boton cerrar ventana"
             />
           </button>
@@ -140,14 +139,14 @@
         <div class="popup__content-image">
           <button class="popup__button-close">
             <img
-              src="images/Close_Icon.svg"
+              src="<%= require('./images/Close_Icon.svg')%>"
               alt="Imagen boton cerrar ventana"
             />
           </button>
           <img
             class="popup__image"
             alt="Area para colocar imagenes de popup"
-            src="images/lago_dibraise.jpg"
+            src="<%= require('./images/lago_dibraise.jpg')%>"
           />
           <h3 class="popup__title"></h3>
         </div>
@@ -156,12 +155,12 @@
       <template class="card-template">
         <div class="element">
           <img
-            src="images/yosey_valley.jpg"
+            src="<%= require('./images/yosey_valley.jpg')%>"
             alt="Yosemite"
             class="element__image"
           />
           <button class="button-delete">
-            <img src="images/Trash.svg" alt="imagen boton eliminar imagen" />
+            <img src="<%= require('./images/Trash.svg')%>" alt="imagen boton eliminar imagen" />
           </button>
           <div class="element__place">
             <h3 class="element__title">Yosemite</h3>
@@ -169,7 +168,6 @@
           </div>
         </div>
       </template>
-      <script type="module" src="page/index.js"></script>
     </div>
   </body>
 </html>

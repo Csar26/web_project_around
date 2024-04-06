@@ -1,8 +1,9 @@
-import Popup from "../components/Popup.js";
-import { PopupWithForm } from "../components/PopupWithForms.js";
-import { PopupWithImage } from "../components/PopupWithImage.js";
-import UserInfo from "../components/UserInfo.js";
-import Card from "../components/Card.js";
+import './styles/index.css';
+import Popup from "./components/Popup.js";
+import { PopupWithForm } from "./components/PopupWithForms.js";
+import { PopupWithImage } from "./components/PopupWithImage.js";
+import UserInfo from "./components/UserInfo.js";
+import Card from "./components/Card.js";
 import {
   closeButtonImage,
   togglePopup,
@@ -21,8 +22,8 @@ import {
   formValidatorAddCard,
   buttonEdit,
   closeButton,
-} from "../utils/utils.js";
-import Section from "../components/Section.js";
+} from "./utils/utils.js";
+import Section from "./components/Section.js";
 
 function createCard(item) {
   const newCard = new Card(
