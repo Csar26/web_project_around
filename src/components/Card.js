@@ -40,7 +40,7 @@ export default class Card {
     }
 
     if(!!this._owner && !!this._user && !this.userIsOwner()){
-      this._node.querySelector(".button-delete").style.display = 'none';;
+      this._node.querySelector(".button-delete").style.display = 'none';
     }
 
     return this._node;
