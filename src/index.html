@@ -152,6 +152,24 @@
         </div>
       </div>
 
+      <div class="popup popup_content_confirmation">
+        <div class="popup__overlay"></div>
+        <div class="popup__content popup__content_confirmation">
+          <button class="popup__button-close">
+            <img
+              src="<%= require('./images/Close_Icon.svg')%>"
+              alt="Imagen boton cerrar ventana"
+            />
+          </button>
+          <form class="popup__form popup__form_confirmation">            
+            <h2>Estas seguro</h2>
+            <fieldset class="popup__set">
+              <button type="button" class="form form_submit">Si</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+
       <template class="card-template">
         <div class="element">
           <img
@@ -165,6 +183,7 @@
           <div class="element__place">
             <h3 class="element__title">Yosemite</h3>
             <button class="element__like"></button>
+            <p class="element__counter">0</p>
           </div>
         </div>
       </template>

@@ -8,7 +8,7 @@ export default class Card {
     handleLike,
     handleRemoveLike,
     handleDeleteCard,
-    { _id, likes, owner, createdAt }, 
+    { _id, likes, owner, createdAt },
     user
   ) {
     this._title = title;
@@ -23,7 +23,6 @@ export default class Card {
     this._owner = owner;
     this._createdAt = createdAt;
     this._user = user;
-    
   }
 
   _getTemplate() {
@@ -33,16 +32,20 @@ export default class Card {
       .cloneNode(true);
     this._node.querySelector(".element__title").textContent = this._title;
     this._node.querySelector(".element__image").src = this._link;
-    if(!!this._likes && this.hasOwnerLike()){
+    if (!!this._likes && this.hasOwnerLike()) {
       this._node
-              .querySelector(".element__like")
-              .classList.add("element__like-click");
+        .querySelector(".element__like")
+        .classList.add("element__like-click");
     }
 
-    if(!!this._owner && !!this._user && !this.userIsOwner()){
-      this._node.querySelector(".button-delete").style.display = 'none';;
+    if (!!this._owner && !!this._user && !this.userIsOwner()) {
+      this._node.querySelector(".button-delete").style.display = "none";
     }
 
+    if (this._likes) {
+      this._node.querySelector(".element__counter").textContent =
+        this._likes.length;
+    }
     return this._node;
   }
 
@@ -67,6 +70,8 @@ export default class Card {
               .querySelector(".element__like")
               .classList.remove("element__like-click");
             this._likes = card.likes;
+            this._node.querySelector(".element__counter").textContent =
+              this._likes.length;
           });
         } else {
           this._handleLike(this._id).then((card) => {
@@ -74,9 +79,10 @@ export default class Card {
               .querySelector(".element__like")
               .classList.add("element__like-click");
             this._likes = card.likes;
+            this._node.querySelector(".element__counter").textContent =
+              this._likes.length;
           });
         }
-        //colocar el textcontet de contador de likes : textContent = this._likes.lenghtM
       }
       //this._node .querySelector(".element__like")
       // .classList.toggle("element__like-click");

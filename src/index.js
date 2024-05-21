@@ -25,16 +25,19 @@ import {
 } from "./utils/utils.js";
 import Section from "./components/Section.js";
 import { api } from "./utils/Api.js";
+import PopupConfirmation from "./components/PopupConfirmation.js";
 
 let currentUser = null;
 
 function remoteDeleteCard(idCard) {
-  api.deleteCard(idCard).then(() => {
-    api.getCards().then((cards) => {
-      section.setItems(cards);
-      section.renderer();
+  popupConfirmation.open(() => {
+    return api.deleteCard(idCard).then(() => {
+      api.getCards().then((cards) => {
+        section.setItems(cards);
+        section.renderItems();
+      });
     });
-  });
+  })
 }
 
 function removeLikeCard(idCard) {
@@ -122,9 +125,12 @@ const popupAddElement = new PopupWithForm(
 
 const popupImage = new PopupWithImage(".popup_content_image");
 
+const popupConfirmation = new PopupConfirmation('.popup_content_confirmation');
+
 popupProfile.setEventListeners();
 popupAddElement.setEventListeners();
 popupImage.setEventListeners();
+popupConfirmation.setEventListeners();
 
 buttonEdit.addEventListener("click", function () {
   popupProfile.open();
