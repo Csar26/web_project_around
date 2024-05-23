@@ -65,6 +65,19 @@
   background-image: url(../images/like_black_vector.svg);
 }
 
+.element__counter {
+  position: relative;
+  width: 9px;
+  height: 0px;
+  top: 40px;
+  right: 14px;
+  font-family: Inter;
+   font-size: 13px;
+   font-weight: 400;
+
+
+}
+
 @media screen and (max-width: 880px) {
   .elements {
     display: flex;
