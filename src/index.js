@@ -22,6 +22,7 @@ import {
   formValidatorAddCard,
   buttonEdit,
   closeButton,
+  avatar
 } from "./utils/utils.js";
 import Section from "./components/Section.js";
 import { api } from "./utils/Api.js";
@@ -102,24 +103,28 @@ api.getUserInfo().then(user => {
 })
 
 
-
 const userInfo = new UserInfo(".profile__name", ".profile__job");
 
 const popupProfile = new PopupWithForm(
   ".popup_content_edit-profile",
-  ({ name, job }) => {
+  ({ name, job }, buttonWithForm) => {
     api.updateUser(name, job).then((user) => {
       userInfo.setUserInfo(name, job);
+      buttonWithForm.textContent = "Save";
+      popupProfile.close();
     });
   }
 );
 
 const popupAddElement = new PopupWithForm(
   ".popup_content_add-element",
-  ({ title, link }) => {
+  ({ title, link }, buttonWithForm) => {
+
     api.addCard(link, title).then((card) => {
       const newCard = createCard(card);
       container.prepend(newCard);
+      buttonWithForm.textContent = "Save";
+      popupAddElement.close();
     });
   }
 );
@@ -128,6 +133,17 @@ const popupImage = new PopupWithImage(".popup_content_image");
 
 const popupWithConfirmation = new PopupWithConfirmation('.popup_content_confirmation');
 
+const popupAvatar = new PopupWithForm(".popup_content_avatar", 
+({link}) => {
+  api.changeavatar(link).then((avatar) => {
+    avatar.addEventListener("click", function (){
+      popupAvatar.open();
+    })
+
+  })
+}
+);
+popupAvatar.setEventListeners();
 popupProfile.setEventListeners();
 popupAddElement.setEventListeners();
 popupImage.setEventListeners();

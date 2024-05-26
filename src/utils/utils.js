@@ -5,6 +5,7 @@ export const popupProfile = document.querySelector(
   ".popup_content_edit-profile"
 );
 export const closeButton = popupProfile.querySelector(".popup__button-close");
+export const avatar = document.querySelector(".popup_content_avatar");
 
 export const profileName = document.querySelector(".profile__name");
 export const profileJob = document.querySelector(".profile__job");

@@ -5,6 +5,12 @@
   border: 1px;
   padding-top: 45px;
 }
+
+.avatar:hover{
+  opacity: 0.3;
+  cursor: pointer;
+}
+
 @media screen and  (max-width: 880px) {
   .place-logo {
     width: 320px;

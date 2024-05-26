@@ -168,6 +168,36 @@
           </form>
         </div>
       </div>
+      
+      <div class="popup popup_content_avatar">
+        <div class="popup__overlay"></div>
+        <div class="popup__content">
+          <button class="popup__button-close">
+            <img
+              src="<%= require('./images/Close_Icon.svg')%>"
+              alt="imagen para cerrar ventana modal"
+            />
+          </button>
+          <form class="popup__form popup__form_avatar" novalidate>
+            <label for="input-name" class="popup__label">Edit profile photo</label>
+            <fieldset class="popup__set">
+              <label for="input-name" class="popup__label popup__label_edit">
+              </label>
+              <input
+              type="url"
+              required
+              class="form form_input"
+              name="link"
+              placeholder="link"
+              />
+              <span class="form form_error form_error_index-name"></span>
+            </fieldset>
+            <fieldset class="form form_set">
+              <button type="submit" class="form form_submit">Save</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
       <template class="card-template">
         <div class="element">
           <img

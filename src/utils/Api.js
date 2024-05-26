@@ -79,6 +79,17 @@ class Api {
       method: "DELETE",
     }).then((response) => response.json());
   }
+
+changeavatar(avatar){
+  return fetch(this._url + "/users/me/avatar" + avatar, {
+    headers: {
+      Authorization: this._token,
+      "Content-Type": "application/json",
+    },
+    method: "PATCH",
+  }).then((response) => response.json());
+}
+
 }
 
 export const api = new Api(
