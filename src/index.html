@@ -9,20 +9,33 @@
     <div class="page">
       <header class="header">
         <div class="place-logo">
-          <img src="<%= require('./images/Vector.svg')%>" alt="logo Around" class="logo" />
-          <img src="<%= require('./images/Line.svg')%>" alt="line logo" class="line" />
+          <img
+            src="<%= require('./images/Vector.svg')%>"
+            alt="logo Around"
+            class="logo"
+          />
+          <img
+            src="<%= require('./images/Line.svg')%>"
+            alt="line logo"
+            class="line"
+          />
         </div>
         <section class="profile">
-          <img
-            src="<%= require('./images/Avatar.png')%>"
-            alt="Jacques Cousteau, explorador y Biologo marino."
-            class="avatar"
-          />
+          <button class="profile__avatar-edit">
+            <img
+              src="<%= require('./images/Avatar.png')%>"
+              alt="Jacques Cousteau, explorador y Biologo marino."
+              class="avatar"
+            />
+          </button>
           <div class="profile__info">
             <div class="profile__name-area">
               <h1 class="profile__name">Jacques Cousteau</h1>
               <button class="profile__button">
-                <img src="<%= require('./images/Edit_Button.svg')%>" alt="Boton editar perfil" />
+                <img
+                  src="<%= require('./images/Edit_Button.svg')%>"
+                  alt="Boton editar perfil"
+                />
               </button>
             </div>
 
@@ -86,7 +99,7 @@
                 name="job"
                 value="Explorer"
               />
-              <span class="form form_error form_error_index-about"></span>
+              <span class="form form_error form_error_index-job"></span>
             </fieldset>
             <fieldset class="form form_set">
               <button type="submit" class="form form_submit">Save</button>
@@ -160,7 +173,7 @@
               alt="Imagen boton cerrar ventana"
             />
           </button>
-          <form class="popup__form popup__form_confirmation">            
+          <form class="popup__form popup__form_confirmation">
             <h2 class="confirmation__title">¿Estás seguro?</h2>
             <fieldset class="popup__set">
               <button type="button" class="form form_submit">Si</button>
@@ -168,7 +181,7 @@
           </form>
         </div>
       </div>
-      
+
       <div class="popup popup_content_avatar">
         <div class="popup__overlay"></div>
         <div class="popup__content">
@@ -179,16 +192,18 @@
             />
           </button>
           <form class="popup__form popup__form_avatar" novalidate>
-            <label for="input-name" class="popup__label">Edit profile photo</label>
+            <label for="input-name" class="popup__label"
+              >Edit profile photo</label
+            >
             <fieldset class="popup__set">
               <label for="input-name" class="popup__label popup__label_edit">
               </label>
               <input
-              type="url"
-              required
-              class="form form_input"
-              name="link"
-              placeholder="link"
+                type="url"
+                required
+                class="form form_input"
+                name="link"
+                placeholder="link"
               />
               <span class="form form_error form_error_index-name"></span>
             </fieldset>
@@ -206,7 +221,10 @@
             class="element__image"
           />
           <button class="button-delete">
-            <img src="<%= require('./images/Trash.svg')%>" alt="imagen boton eliminar imagen" />
+            <img
+              src="<%= require('./images/Trash.svg')%>"
+              alt="imagen boton eliminar imagen"
+            />
           </button>
           <div class="element__place">
             <h3 class="element__title">Yosemite</h3>

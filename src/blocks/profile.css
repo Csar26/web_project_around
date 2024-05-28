@@ -66,6 +66,18 @@
   cursor: pointer;
 }
 
+.profile__avatar-edit {
+  background: none;
+  border: none;
+}
+
+.profile__avatar-edit:hover {
+  background-image: url(../images/Edit_Button.svg);
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: center center;
+}
+
 @media screen and (max-width: 880px) {
   .profile {
     display: flex;

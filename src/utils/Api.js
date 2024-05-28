@@ -81,11 +81,14 @@ class Api {
   }
 
 changeavatar(avatar){
-  return fetch(this._url + "/users/me/avatar" + avatar, {
+  return fetch(this._url + "/users/me/avatar", {
     headers: {
       Authorization: this._token,
       "Content-Type": "application/json",
     },
+    body: JSON.stringify({
+      avatar
+    }),
     method: "PATCH",
   }).then((response) => response.json());
 }

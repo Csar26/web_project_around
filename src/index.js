@@ -22,13 +22,12 @@ import {
   formValidatorAddCard,
   buttonEdit,
   closeButton,
-  avatar
+  avatar,
 } from "./utils/utils.js";
 import Section from "./components/Section.js";
 import { api } from "./utils/Api.js";
 import PopupWithConfirmation from "./components/PopupWithConfirmation.js";
 let currentUser = null;
-
 
 function remoteDeleteCard(idCard) {
   popupWithConfirmation.open(() => {
@@ -38,9 +37,8 @@ function remoteDeleteCard(idCard) {
         section.renderItems();
       });
     });
-  })
+  });
 }
-    
 
 function removeLikeCard(idCard) {
   return api.deleteLikeCard(idCard);
@@ -90,25 +88,25 @@ const section = new Section(
   ".elements"
 );
 
-api.getUserInfo().then(user => {
+api.getUserInfo().then((user) => {
   currentUser = user;
+  document.querySelector(".avatar").src = user.avatar;
   api
-  .getCards()
-  .then((cards) => {
-    section.setItems(cards);
-  })
-  .finally(() => {
-    section.renderItems();
-  });
-})
-
+    .getCards()
+    .then((cards) => {
+      section.setItems(cards);
+    })
+    .finally(() => {
+      section.renderItems();
+    });
+});
 
 const userInfo = new UserInfo(".profile__name", ".profile__job");
 
 const popupProfile = new PopupWithForm(
   ".popup_content_edit-profile",
   ({ name, job }, buttonWithForm) => {
-    api.updateUser(name, job).then((user) => {
+    return api.updateUser(name, job).then((user) => {
       userInfo.setUserInfo(name, job);
       buttonWithForm.textContent = "Save";
       popupProfile.close();
@@ -119,8 +117,7 @@ const popupProfile = new PopupWithForm(
 const popupAddElement = new PopupWithForm(
   ".popup_content_add-element",
   ({ title, link }, buttonWithForm) => {
-
-    api.addCard(link, title).then((card) => {
+    return api.addCard(link, title).then((card) => {
       const newCard = createCard(card);
       container.prepend(newCard);
       buttonWithForm.textContent = "Save";
@@ -131,18 +128,16 @@ const popupAddElement = new PopupWithForm(
 
 const popupImage = new PopupWithImage(".popup_content_image");
 
-const popupWithConfirmation = new PopupWithConfirmation('.popup_content_confirmation');
-
-const popupAvatar = new PopupWithForm(".popup_content_avatar", 
-({link}) => {
-  api.changeavatar(link).then((avatar) => {
-    avatar.addEventListener("click", function (){
-      popupAvatar.open();
-    })
-
-  })
-}
+const popupWithConfirmation = new PopupWithConfirmation(
+  ".popup_content_confirmation"
 );
+
+const popupAvatar = new PopupWithForm(".popup_content_avatar", ({ link }) => {
+  return api.changeavatar(link).then((user) => {
+    document.querySelector(".avatar").src = user.avatar;
+    popupAvatar.close();
+  });
+});
 popupAvatar.setEventListeners();
 popupProfile.setEventListeners();
 popupAddElement.setEventListeners();
@@ -160,3 +155,9 @@ addButton.addEventListener("click", function () {
 formValidatorProfile.enableValidation();
 formValidatorAddCard.enableValidation();
 section.renderItems();
+
+document
+  .querySelector(".profile__avatar-edit")
+  .addEventListener("click", () => {
+    popupAvatar.open();
+  });
