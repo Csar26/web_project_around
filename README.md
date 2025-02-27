@@ -1,8 +1,36 @@
 # Tripleten web_project_around
 https://csar26.github.io/web_project_around/
-NOMBRE DEL PROYECTO: PROYECTO 5
-PAGUINA RESPONSIVA PARA RESOLICIONES DE 1280px, 768px Y 320px
-DESARROLLO DE PAGINA WEB MEDIANTE LA IMPLEMENTACION DE LA ARQUITECTURA DE LA METODOLOGIA BEM FLAT, FUNCIONALIDADES DE ROTACION, TRANSFORM, Y DIFERENTES TIPOS DE ESTILOS MEDIANTE LA IMPORTACION DE HOJAS DE ESTILO.
-LA IMPLEMENTACION DE LA ARQUITECTURA BEM LA LOGRAMOS UNA ORGANIZACION DE FACIL LECTURA PARA CUALQUIER DESARROLLADOR.
-LA ORGANIZACION DE LOS DIFERENTES BLOQUES FUE POSIBLE GRACIAS A LAS DIFERENTES COMBINACION DE ESTILOS Y FUNCIONES DE FLEXBOX.
-IMPLEMENTACION DEL CODIGO DE PROGRAMACION MEDIANTE EL LENGUAJE JAVA SCRIPT.
+Proyecto 5 - Página Responsiva
+📌 Descripción
+Este proyecto consiste en el desarrollo de una página web responsiva optimizada para resoluciones de 1280px, 768px y 320px. Se implementaron diversas metodologías y tecnologías para garantizar un diseño limpio, estructurado y fácil de mantener.
+
+🛠️ Tecnologías y Metodologías
+Arquitectura BEM: Se utilizó la metodología BEM para estructurar los estilos, logrando un código más organizado y fácil de leer para cualquier desarrollador.
+CSS3 y Flexbox: Se implementaron diversas combinaciones de estilos y funciones de Flexbox para organizar los bloques de contenido de manera eficiente.
+Animaciones y Transformaciones: Uso de propiedades como rotate, transform, y otros efectos visuales para mejorar la experiencia de usuario.
+JavaScript: Se incorporó código en JavaScript para mejorar la interactividad y funcionalidad de la página.
+📱 Diseño Responsivo
+La estructura de la página se adaptó a diferentes resoluciones para garantizar una experiencia óptima en dispositivos de escritorio, tablets y móviles.
+
+🚀 Cómo Ejecutar el Proyecto
+Clona este repositorio:
+bash
+Copy
+Edit
+git clone https://github.com/tu-usuario/proyecto5.git
+Abre el archivo index.html en tu navegador.
+📂 Estructura del Proyecto
+css
+Copy
+Edit
+/proyecto5
+│── index.html
+│── styles/
+│   ├── main.css
+│── scripts/
+│   ├── main.js
+│── assets/
+│   ├── images/
+│── README.md
+📌 Autor
+👨‍💻 Cesar Vivas
