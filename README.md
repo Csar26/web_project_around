@@ -1,29 +1,29 @@
 # Tripleten web_project_around
 https://csar26.github.io/web_project_around/
-Proyecto 5 - Página Responsiva
-📌 Descripción
-Este proyecto consiste en el desarrollo de una página web responsiva optimizada para resoluciones de 1280px, 768px y 320px. Se implementaron diversas metodologías y tecnologías para garantizar un diseño limpio, estructurado y fácil de mantener.
+Project 5 - Responsive Web Page
+📌 Description
+This project involves the development of a responsive web page optimized for 1280px, 768px, and 320px resolutions. Various methodologies and technologies were implemented to ensure a clean, well-structured, and maintainable design.
 
-🛠️ Tecnologías y Metodologías
-Arquitectura BEM: Se utilizó la metodología BEM para estructurar los estilos, logrando un código más organizado y fácil de leer para cualquier desarrollador.
-CSS3 y Flexbox: Se implementaron diversas combinaciones de estilos y funciones de Flexbox para organizar los bloques de contenido de manera eficiente.
-Animaciones y Transformaciones: Uso de propiedades como rotate, transform, y otros efectos visuales para mejorar la experiencia de usuario.
-JavaScript: Se incorporó código en JavaScript para mejorar la interactividad y funcionalidad de la página.
-📱 Diseño Responsivo
-La estructura de la página se adaptó a diferentes resoluciones para garantizar una experiencia óptima en dispositivos de escritorio, tablets y móviles.
+🛠️ Technologies & Methodologies
+BEM Architecture: The BEM methodology was used to structure styles, making the code more organized and easier to read for any developer.
+CSS3 & Flexbox: Various combinations of styles and Flexbox functions were implemented to efficiently arrange content blocks.
+Animations & Transformations: Properties such as rotate, transform, and other visual effects were applied to enhance user experience.
+JavaScript: JavaScript was incorporated to improve the page’s interactivity and functionality.
+📱 Responsive Design
+The page structure adapts to different screen resolutions, ensuring an optimal experience on desktop, tablets, and mobile devices.
 
-🚀 Cómo Ejecutar el Proyecto
-Clona este repositorio:
+🚀 How to Run the Project
+Clone this repository:
 bash
 Copy
 Edit
-git clone https://github.com/tu-usuario/proyecto5.git
-Abre el archivo index.html en tu navegador.
-📂 Estructura del Proyecto
+git clone https://github.com/your-username/project5.git
+Open the index.html file in your browser.
+📂 Project Structure
 css
 Copy
 Edit
-/proyecto5
+/project5
 │── index.html
 │── styles/
 │   ├── main.css
@@ -32,5 +32,5 @@ Edit
 │── assets/
 │   ├── images/
 │── README.md
-📌 Autor
+📌 Author
 👨‍💻 Cesar Vivas
